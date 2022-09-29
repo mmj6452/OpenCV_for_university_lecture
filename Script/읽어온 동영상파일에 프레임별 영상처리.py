@@ -1,7 +1,7 @@
 import cv2
 from Script.Common.utils import put_string
 
-capture = cv2.VideoCapture("C:/Users/64527/PycharmProjects/pythonProject/venv/Img/video_file.avi")
+capture = cv2.VideoCapture("C:/Users/64527/PycharmProjects/OpenCV_university/Img/video_file.avi")
 if not capture.isOpened(): raise Exception("동영상 파일 개방안됨")
 
 frame_rate = capture.get(cv2.CAP_PROP_FPS)
