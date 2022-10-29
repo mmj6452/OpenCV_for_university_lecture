@@ -22,11 +22,14 @@ idx[int(high+1):] = 255
 
 dst = cv2.LUT(image, idx.astype('uint8'))
 hist_dst = cv2.calchist([dst], [0], None, bsize, ranges)
-hist_img = draw_histo(hist, (200,360))
-hist_dst_img = draw_histo(hist_dst, (200,360)
+hist_img = cv2.draw_histo(hist, (200,360))
+hist_dst_img = cv2.draw_histo(hist_dst, (200,360))
 
-print("high_vlue=", high) print("low_vlue=", low) cv2.imshow("image", image); cv2.imshow("dst", dst);
-CV2.waitkey(0)
-cv2.imshow(“hist_img", hist_img) cv2.imshow(“hist_dst_img", hist_dst_img)
+print("high_vlue=", high)
+print("low_vlue=", low)
+cv2.imshow("image", image); cv2.imshow("dst", dst)
+cv2.waitkey(0)
+cv2.imshow("hist_img", hist_img)
+cv2.imshow("hist_dst_img", hist_dst_img)
 
 
